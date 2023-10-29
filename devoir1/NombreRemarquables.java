@@ -1,15 +1,23 @@
+package devoir1;
 import java.util.Scanner;
 
 public class NombreRemarquables {
 
-    public static void main (String []args){
+	public static void main (String []args){
+		manualTest(args);
+	}
+	
+    public static void manualTest (String []args){
         Scanner scan = new Scanner (System.in);
         System.out.println("entrer un nombre entier");
         int n = scan.nextInt();
         boolean estSimiliCarre= estSimiliCarre(n);
         //emunererChiffre(n);
         System.out.println(n+ " est simili caree ?"+ estSimiliCarre);
+        scan.close();
     }
+    
+    
 
     public static void emunererChiffre (int n){
         while(n>0){
@@ -24,7 +32,6 @@ public class NombreRemarquables {
 
     public static boolean estSimiliCarre (int n){
         int nCarre= n*n;
-            System.out.println("le carree est "+nCarre);
         boolean estSimiliCarre = false;
         while (n>0){
             if (n%10!=nCarre%10){
@@ -33,7 +40,6 @@ public class NombreRemarquables {
             }
             n = n/10;
             nCarre = nCarre/10;
-            System.out.println("le carree est "+nCarre+" et le nombre est egale a "+ n);
             if (n==0){
                 estSimiliCarre = true;
             }
