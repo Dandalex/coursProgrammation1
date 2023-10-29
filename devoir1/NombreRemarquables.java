@@ -10,10 +10,13 @@ public class NombreRemarquables {
     public static void manualTest (String []args){
         Scanner scan = new Scanner (System.in);
         System.out.println("entrer un nombre entier");
+        //int n=-25;
         int n = scan.nextInt();
         boolean estSimiliCarre= estSimiliCarre(n);
         //emunererChiffre(n);
-        System.out.println(n+ " est simili caree ?"+ estSimiliCarre);
+        //boolean estPremier = estPremier(n);
+        //System.out.println(n+ " est premier ?"+ estPremier);
+        System.out.println(n+ " est simili carre ?"+ estSimiliCarre);
         scan.close();
     }
     
@@ -32,8 +35,11 @@ public class NombreRemarquables {
 
     public static boolean estSimiliCarre (int n){
         int nCarre= n*n;
-        boolean estSimiliCarre = false;
-        while (n>0){
+        boolean estSimiliCarre = true;
+        if (n<0) {
+        	n=-n;
+        }
+        while (n>=0){
             if (n%10!=nCarre%10){
                 estSimiliCarre = false;
                 break;
@@ -42,22 +48,34 @@ public class NombreRemarquables {
             nCarre = nCarre/10;
             if (n==0){
                 estSimiliCarre = true;
+                return estSimiliCarre;
             }
         }
         return estSimiliCarre;
     }
 
-    public static boolean estPrimier (int n){
-            boolean estPremier = false;
-            //a faire, aurait exemple sur moodle
-
-
+    public static boolean estPremier (int n){
+            boolean estPremier = true;
+            	for (int i=2;i<=n/2;i++) {
+            		if(n%i==0) {
+            			estPremier=false;
+            			return estPremier;
+            		}
+            	}
             return estPremier;
         }
 
-    public static boolean estExtraPrimier (int n){
-        boolean estExtraPremier = false;
-        //a faire, aurait exemple sur moodle
+    public static boolean estExtraPremier (int n){
+        boolean estExtraPremier = true;
+        	while (n>0) {
+        		estExtraPremier = estPremier (n);
+        		if (estExtraPremier = false) {
+        			return estExtraPremier;
+        		}
+        		else {
+        			n= n/10;
+        		}
+        	}
 
 
         return estExtraPremier;

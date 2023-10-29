@@ -39,7 +39,7 @@ class NombreRemarquablesTest2 {
 	@Test
 	void test4EstSimiliCarre() {
 		boolean expectedValue=true;
-		boolean actualValue = NombreRemarquables.estSimiliCarre(0);
+		boolean actualValue = NombreRemarquables.estSimiliCarre(25);
 		assertEquals(expectedValue, actualValue);
 	}
 	@Test
@@ -48,21 +48,43 @@ class NombreRemarquablesTest2 {
 		boolean actualValue = NombreRemarquables.estSimiliCarre(-25);
 		assertEquals(expectedValue, actualValue);
 	}
-	
 	@Test
-	void testenumererChiffre() {
-		string actualValue= NombreRemarquables.enumererChiffre(625);
+	void test6EstSimiliCarre() {
+		boolean expectedValue=true;
+		boolean actualValue = NombreRemarquables.estSimiliCarre(0);
+		assertEquals(expectedValue, actualValue);
 	}
+	
+	//@Test
+	//void testenumererChiffre() {
+		//string actualValue= NombreRemarquables.enumererChiffre(625);
+	//}
 
 	
 	@Test
-	void testEstPrimier() {
-		fail("Not yet implemented");
+	void testEstPremier() {
+		boolean expectedValue=true;
+		boolean actualValue = NombreRemarquables.estPremier(5);
+		assertEquals(expectedValue, actualValue);
+	}
+	@Test
+	void testEstPremier2() {
+		boolean expectedValue=true;
+		boolean actualValue = NombreRemarquables.estPremier(7);
+		assertEquals(expectedValue, actualValue);
+	}
+	@Test
+	void testEstPremier3() {
+		boolean expectedValue=false;
+		boolean actualValue = NombreRemarquables.estPremier(200);
+		assertEquals(expectedValue, actualValue);
 	}
 
 	@Test
 	void testEstExtraPrimier() {
-		fail("Not yet implemented");
+		boolean expectedValue=false;
+		boolean actualValue = NombreRemarquables.estExtraPremier(59399);
+		assertEquals(expectedValue, actualValue);
 	}
 
 }
