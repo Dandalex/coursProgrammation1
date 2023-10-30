@@ -12,11 +12,11 @@ public class NombreRemarquables {
         System.out.println("entrer un nombre entier");
         //int n=-25;
         int n = scan.nextInt();
-        boolean estSimiliCarre= estSimiliCarre(n);
+        //boolean estSimiliCarre= estSimiliCarre(n);
         //emunererChiffre(n);
-        //boolean estPremier = estPremier(n);
+        boolean estPremier = estExtraPremier(n);
         //System.out.println(n+ " est premier ?"+ estPremier);
-        System.out.println(n+ " est simili carre ?"+ estSimiliCarre);
+        System.out.println(n+ " est simili carre ?"+ estPremier);
         scan.close();
     }
     
@@ -69,7 +69,7 @@ public class NombreRemarquables {
         boolean estExtraPremier = true;
         	while (n>0) {
         		estExtraPremier = estPremier (n);
-        		if (estExtraPremier = false) {
+        		if (estExtraPremier == false) {
         			return estExtraPremier;
         		}
         		else {

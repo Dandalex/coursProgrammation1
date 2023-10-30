@@ -82,8 +82,19 @@ class NombreRemarquablesTest2 {
 
 	@Test
 	void testEstExtraPrimier() {
-		boolean expectedValue=false;
+		boolean expectedValue=true;
 		boolean actualValue = NombreRemarquables.estExtraPremier(59399);
+		assertEquals(expectedValue, actualValue);
+	}
+	@Test
+	void test2EstExtraPrimier() {
+		boolean expectedValue=true;
+		boolean actualValue = NombreRemarquables.estExtraPremier(31379);
+		assertEquals(expectedValue, actualValue);
+	}@Test
+	void test3EstExtraPrimier() {
+		boolean expectedValue=false;
+		boolean actualValue = NombreRemarquables.estExtraPremier(431);
 		assertEquals(expectedValue, actualValue);
 	}
 
