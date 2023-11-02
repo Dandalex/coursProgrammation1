@@ -20,9 +20,8 @@ class NombreRemarquablesTest2 {
 
 	@Test
 	void testEstSimiliCarre() {
-		boolean expectedValue=true;
 		boolean actualValue = NombreRemarquables.estSimiliCarre(25);
-		assertEquals(expectedValue, actualValue);
+		assertTrue(actualValue);
 	}
 	@Test
 	void test2EstSimiliCarre() {
