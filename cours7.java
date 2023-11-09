@@ -16,12 +16,70 @@ public class cours7 {
         somme = notes[i] + somme;
         moyenne = somme*1.0/ notes.length;
       }
+      trierSelection(notes);
+      for (int test:notes) {
+    	  System.out.println(test);
+      }
     System.out.println("La moyenne est  "+moyenne); 
     int NoteLaPLusBasse = noteLaPlusBasse(notes);
     System.out.println("la note la plus basse est " +NoteLaPLusBasse);
         
     
 	}
+    
+    
+    public static void trierSelection(int[] tab){
+        trierSelRecursif(tab, 0, tab.length);
+      }
+      
+      public static void trierSelRecursif(int[] tab, int debut , int fin){
+
+        //if cas de base
+        if(debut==fin-1){
+          return; // rien a faire
+        }
+        //trouver la plus petite valeur entre debut et fin
+        int candidat= tab[debut];
+        int position_min = debut;
+        for (int i = debut; i < fin; i++){
+          if(tab[i] < candidat){
+            candidat = tab[i];
+            position_min = i;
+          }
+        }
+        // permuter les valeurs a la position "debut" et la position "position_min"
+        int temp = tab[debut];
+        tab[debut] = tab[position_min];// position du min
+        tab[position_min] = temp;
+
+        trierSelRecursif(tab, debut+1, fin);
+
+        
+      }
+    
+    
+    
+    
+    
+    public static void sortArrayIncrease (int[]a) {
+		boolean changement = false;	
+    	do {
+    		changement=false;
+			for (int i=0; i<a.length-1; i++) {
+				if(a [i] > a[i+1]) {
+					int temp;
+					temp = a[i];
+					a[i]= a[i+1];
+					a[i+1]=	temp;	
+					changement=true;
+				}
+			}		
+		}while (changement==true);
+			/* on pourrait mettre une valeur boolean, false avant le boucle for
+			 * et devient true dans le if*/
+			}
+			
+			
 
     public static boolean equalsArray (int [] a,int []b){
         if (a.length!=b.length){
