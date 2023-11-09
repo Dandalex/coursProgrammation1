@@ -1,7 +1,7 @@
 package devoir1;
 import java.util.Scanner;
 
-public class NombresRemarquables {
+public class NombresRemarquablesCopy {
 
 	public static void main (String []args){
 		manualTest(args);
