@@ -22,7 +22,7 @@ public class NombresRemarquables {
     
     
 
-    public static void emunererChiffres (int n){
+    public static void enumererChiffres (int n){
         while(n>0){
             int a = n%10;
             n = n/10;
