@@ -3,24 +3,10 @@ import java.util.Scanner;
 
 public class NombresRemarquables {
 
-	public static void main (String []args){
-		manualTest(args);
+	public static void main(String[] args) {
+
 	}
 	
-    public static void manualTest (String []args){
-        Scanner scan = new Scanner (System.in);
-        System.out.println("entrer un nombre entier");
-        //int n=-25;
-        int n = scan.nextInt();
-       // boolean estSimiliCarre= estSimiliCarre(n);
-        //emunererChiffres(n);
-        //boolean estPremier = estExtraPremier(n);
-        //System.out.println(n+ " est premier ?"+ estPremier);
-        System.out.println(n+ " est simili carre ?");
-        scan.close();
-    }
-    
-    
 
     public static void enumererChiffres (int n){
         while(n>0){
